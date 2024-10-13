@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navBtn">
+        <button id="backBtn"><<</button>
+        <button id="nextBtn">>></button>
+      </div>
+      <img
+        src="./assets/german-longhaired-pointer_1280.jpg"
+        id="img-display"
+        srcset="
+          ./assets/german-longhaired-pointer_400jpg    400w,
+          ./assets/german-longhaired-pointer_600.jpg   600w,
+          ./assets/german-longhaired-pointer_800.jpg   800w,
+          ./assets/german-longhaired-pointer_1280.jpg 1280w
+        "
+        alt="Gallery image"
+        tabindex="2"
+      />
+      <div id="image-list" class="thumbnail-container"></div>
+    </div>
+  </body>
+</html>

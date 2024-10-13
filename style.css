@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: fit-content;
+  height: auto;
+  top: 26px;
+  background-color: rgb(166, 158, 156);
+  border-radius: 5px;
+}
+.showInputText {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 3em;
+  color: black;
+  font-style: italic;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 1px 2px 2px red;
+}
+.navBtn {
+  position: absolute;
+  bottom: 30px;
+}
+button {
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  background-color: transparent;
+  color: rgb(166, 158, 156);
+  font-weight: bolder;
+  border: 3px solid black;
+  border-radius: 50px;
+  box-shadow: 4px 2px rgb(142, 179, 88);
+  cursor: pointer;
+  font-size: 2em;
+}
+button:hover {
+  background-color: white;
+  box-shadow: 2px 2px tomato;
+  color: black;
+  font-weight: bolder;
+}
+.thumbnail-container img {
+  width: 90px;
+  height: 70px;
+  margin: 4px 2px;
+  border-radius: 5px;
+}
+img {
+  aspect-ratio: 3/1;
+  width: 100%;
+  height: 100vh;
+}
+@media (max-width: 900px) {
+  img {
+    width: 100%;
+  }
+  .thumbnail-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .thumbnail-container {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .thumbnail-container img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid tomato;
+  }
+  .thumbnail-container {
+    width: auto;
+    height: 42px;
+    bottom: 30px;
+  }
+  img {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 400px) {
+  img {
+    width: 100vw;
+    height: 100vh;
+  }
+  button {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .showInputText {
+    display: none;
+  }
+  .navBtn {
+    bottom: 30px;
+  }
+  .thumbnail-container {
+    display: none;
+  }
+}
