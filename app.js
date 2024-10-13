@@ -61,6 +61,7 @@ const imageArr = [
 ];
 const input = document.createElement("input");
 container.appendChild(input);
+input.classList.add("noInput");
 
 for (let i = 0; i < imageArr.length; i++) {
   const img = document.createElement("img");
@@ -72,6 +73,7 @@ for (let i = 0; i < imageArr.length; i++) {
 
   function dogNames() {
     input.classList.add("showInputText");
+    input.classList.remove("noInput");
     input.value = img.title;
   }
   img.src = imageArr[i].src;
